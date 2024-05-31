@@ -8,41 +8,45 @@
     <title>오늘의 운세</title>
     <style>
         body {
-            background-image: url("123.jpg"); 
-            background-size: cover; 
-            color: white; 
-            font-family: Arial, sans-serif; 
-            text-align: center; 
-            padding-top: 50px; 
+            background-image: url("123.jpg");
+            background-size: cover;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
         }
 
-       h1{
+        h1 {
             font-family: "Yeon Sung", system-ui;
             font-weight: 400;
-            font-style: normal; 
-            font-size: 2em; 
+            font-style: normal;
+            font-size: 2em;
             text-shadow: 1px 1px 1px black;
         }
 
         p {
-            font-size: 1.5em; 
+            font-size: 1.5em;
+        }
+
+        .fortune-text {
+            text-shadow: 1px 1px 1px black;
         }
 
         button {
             background-color: #4CAF50;
-            color: white; 
-            padding: 15px 32px; 
-            text-align: center; 
-            display: inline-block; 
-            font-size: 16px; 
-            margin-top: 20px; 
-            border: none; 
-            border-radius: 8px; 
-            cursor: pointer; 
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
         }
 
         button:hover {
-            background-color: #45a049; 
+            background-color: #45a049;
         }
     </style>
 </head>
@@ -61,8 +65,10 @@
             ];
             var randomIndex = Math.floor(Math.random() * fortunes.length);
             var fortune = fortunes[randomIndex];
-           
-       
+
+            var fortuneElement = document.getElementById("fortune");
+            fortuneElement.textContent = fortune;
+            fortuneElement.classList.add("fortune-text");
         }
     </script>
 </body>
