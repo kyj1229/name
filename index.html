@@ -62,9 +62,10 @@
                 "<p style='text-shadow: 1px 1px 1px black;'>긍정적으로 생각하면 좋은 일이 생길 거예요.</p>"
             ];
             var randomIndex = Math.floor(Math.random() * fortunes.length);
-            var fortune = color: black;
             var fortune = fortunes[randomIndex];
-
+            var fortuneElement = document.getElementById("fortune");
+            fortuneElement.textContent = fortune;
+            fortuneElement.style.color = "black";
             document.getElementById("fortune").innerHTML = fortune;
         }
     </script>
