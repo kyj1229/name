@@ -8,42 +8,41 @@
     <title>오늘의 운세</title>
     <style>
         body {
-            background-image: url("123.jpg"); 
-            background-size: cover; 
-            color: black; 
-            font-family: Arial, sans-serif; 
-            text-align: center; 
-            padding-top: 50px; 
+            background-image: url("123.jpg"); /* 배경 이미지 파일의 경로를 넣어주세요 */
+            background-size: cover; /* 화면에 꽉 차도록 배경 이미지를 크기 조절합니다. */
+            color: white; /* 텍스트 색상을 흰색으로 설정합니다. */
+            font-family: Arial, sans-serif; /* 폰트를 Arial 또는 sans-serif로 설정합니다. */
+            text-align: center; /* 텍스트를 가운데 정렬합니다. */
+            padding-top: 50px; /* 상단 여백을 추가하여 텍스트가 화면 중앙에 오도록 합니다. */
         }
 
-        h1 {
+       h1{
             font-family: "Yeon Sung", system-ui;
             font-weight: 400;
             font-style: normal; 
-            font-size: 2em; 
-            text-shadow: 1px 1px 1px black; 
+            font-size: 2em; /* h1 요소의 글꼴 크기를 설정합니다. */
+            text-shadow: 1px 1px 1px black; /* 검은색의 가느다란 윤곽선을 추가합니다. */
         }
 
         p {
-            font-size: 1.5em; 
-            text-shadow: 1px 1px 1px black; 
+            font-size: 1.5em; /* p 요소의 글꼴 크기를 설정합니다. */
         }
 
         button {
-            background-color: #4CAF50; 
-            color: white; 
-            padding: 15px 32px; 
-            text-align: center; 
-            display: inline-block; 
-            font-size: 16px; 
-            margin-top: 20px; 
-            border: none;
-            border-radius: 8px; 
-            cursor: pointer; 
+            background-color: #4CAF50; /* 버튼의 배경색을 초록색으로 설정합니다. */
+            color: white; /* 버튼 텍스트의 색상을 흰색으로 설정합니다. */
+            padding: 15px 32px; /* 버튼 내부 여백을 설정합니다. */
+            text-align: center; /* 버튼 텍스트를 가운데 정렬합니다. */
+            display: inline-block; /* 버튼을 블록 요소로 표시합니다. */
+            font-size: 16px; /* 버튼의 글꼴 크기를 설정합니다. */
+            margin-top: 20px; /* 버튼 위쪽 여백을 추가합니다. */
+            border: none; /* 버튼의 테두리를 없앱니다. */
+            border-radius: 8px; /* 버튼의 모서리를 둥글게 만듭니다. */
+            cursor: pointer; /* 마우스 커서를 포인터로 변경하여 클릭 가능한 상태를 나타냅니다. */
         }
 
         button:hover {
-            background-color: #45a049; 
+            background-color: #45a049; /* 마우스를 버튼 위에 올렸을 때의 배경색을 설정합니다. */
         }
     </style>
 </head>
@@ -55,16 +54,15 @@
     <script>
         function getFortune() {
             var fortunes = [
-                "<p style='text-shadow: 1px 1px 1px black;'>오늘은 행운이 가득할 거예요!</p>",
-                "<p style='text-shadow: 1px 1px 1px black;'>주의력을 기르는 것이 중요한 하루입니다.</p>",
-                "<p style='text-shadow: 1px 1px 1px black;'>오늘은 조심스럽게 행동하세요.</p>",
-                 "<p style='text-shadow: 1px 1px 1px black;'>오늘은 최고로 운이 좋습니다..</p>",
-                "<p style='text-shadow: 1px 1px 1px black;'>긍정적으로 생각하면 좋은 일이 생길 거예요.</p>"
+                "오늘은 행운이 가득할 거예요!",
+                "주의력을 기르는 것이 중요한 하루입니다.",
+                "오늘은 조심스럽게 행동하세요.",
+                "긍정적으로 생각하면 좋은 일이 생길 거예요."
             ];
             var randomIndex = Math.floor(Math.random() * fortunes.length);
             var fortune = fortunes[randomIndex];
-        
-            document.getElementById("fortune").innerHTML = fortune;
+
+            document.getElementById("fortune").textContent = fortune;
         }
     </script>
 </body>
